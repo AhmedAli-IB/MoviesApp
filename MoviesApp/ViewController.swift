@@ -16,8 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configureAppearance()
     }
-    
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         print("viewDidLayoutSubviews called..")
