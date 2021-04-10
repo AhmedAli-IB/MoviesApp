@@ -1,24 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uFt-Tf-ROg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="DKg-pz-cfe">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="cJZ-hE-8h9" customClass="ViewController" customModule="AutomatedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h4P-bR-TlD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitrise" translatesAutoresizingMaskIntoConstraints="NO" id="1zx-Ei-HJS">
+                                <rect key="frame" x="114" y="168" width="186" height="186.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1zx-Ei-HJS" secondAttribute="height" id="12q-wa-ypZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Automation iOS workflow using Bitrise 🚀 🔥" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrf-KW-iqG">
+                                <rect key="frame" x="20" y="374.5" width="374" height="55"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="23"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05L-aU-N34">
+                                <rect key="frame" x="30" y="778" width="354" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JiW-SY-Zux"/>
+                                </constraints>
+                                <state key="normal" title="Details ➡️">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ffh-My-iNe" kind="show" id="70T-0R-2Lh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MSg-H8-ITq"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qrf-KW-iqG" firstAttribute="leading" secondItem="MSg-H8-ITq" secondAttribute="leading" constant="20" id="2Ql-IA-fS2"/>
+                            <constraint firstItem="MSg-H8-ITq" firstAttribute="trailing" secondItem="05L-aU-N34" secondAttribute="trailing" constant="30" id="6I4-xR-Xea"/>
+                            <constraint firstItem="05L-aU-N34" firstAttribute="leading" secondItem="MSg-H8-ITq" secondAttribute="leading" constant="30" id="Jfb-1T-zEv"/>
+                            <constraint firstItem="1zx-Ei-HJS" firstAttribute="top" secondItem="MSg-H8-ITq" secondAttribute="top" constant="80" id="K2h-B7-Tpc"/>
+                            <constraint firstItem="qrf-KW-iqG" firstAttribute="top" secondItem="1zx-Ei-HJS" secondAttribute="bottom" constant="20" id="LVt-3M-aUI"/>
+                            <constraint firstItem="1zx-Ei-HJS" firstAttribute="centerX" secondItem="MSg-H8-ITq" secondAttribute="centerX" id="Mbo-jd-yxn"/>
+                            <constraint firstItem="MSg-H8-ITq" firstAttribute="trailing" secondItem="qrf-KW-iqG" secondAttribute="trailing" constant="20" id="cZq-Zl-kUg"/>
+                            <constraint firstItem="MSg-H8-ITq" firstAttribute="bottom" secondItem="05L-aU-N34" secondAttribute="bottom" constant="40" id="im5-xl-u5P"/>
+                            <constraint firstItem="1zx-Ei-HJS" firstAttribute="width" secondItem="h4P-bR-TlD" secondAttribute="width" multiplier="0.45" id="ot2-aG-6kX"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="o66-g1-FLE"/>
+                    <connections>
+                        <outlet property="bitriseImageView" destination="1zx-Ei-HJS" id="qo0-Sb-4bR"/>
+                        <outlet property="detailsButton" destination="05L-aU-N34" id="knN-kN-tk9"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nl7-6N-tsE" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="QaZ-KG-1XL">
+            <objects>
+                <viewController id="Ffh-My-iNe" customClass="DetailsViewController" customModule="MoviesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O0P-Ev-JLw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fastlane-logo" translatesAutoresizingMaskIntoConstraints="NO" id="fr3-ux-r43">
+                                <rect key="frame" x="114" y="168" width="186" height="186"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="gWb-DE-bFw"/>
+                                    <constraint firstAttribute="height" constant="186" id="wZ0-qe-8Rx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Automation iOS workflow using Fastlane custonm ctions 🚀 🔥" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7P-ei-wLj">
+                                <rect key="frame" x="30" y="374" width="354" height="55"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7l5-UE-rSR"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="fr3-ux-r43" firstAttribute="top" secondItem="7l5-UE-rSR" secondAttribute="top" constant="80" id="7Vc-RC-eyR"/>
+                            <constraint firstAttribute="trailing" secondItem="N7P-ei-wLj" secondAttribute="trailing" constant="30" id="Nsc-de-k6u"/>
+                            <constraint firstItem="fr3-ux-r43" firstAttribute="centerX" secondItem="7l5-UE-rSR" secondAttribute="centerX" id="oRc-M6-i0s"/>
+                            <constraint firstItem="N7P-ei-wLj" firstAttribute="top" secondItem="fr3-ux-r43" secondAttribute="bottom" constant="20" id="xCU-Ru-diL"/>
+                            <constraint firstItem="N7P-ei-wLj" firstAttribute="leading" secondItem="O0P-Ev-JLw" secondAttribute="leading" constant="30" id="xRc-YT-abg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qzW-58-xQR"/>
+                    <connections>
+                        <outlet property="fastlaneImageView" destination="fr3-ux-r43" id="Jc0-ks-dNV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJp-dU-c5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661" y="94"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kF8-Nn-TVQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uFt-Tf-ROg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KWS-HP-yDZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cJZ-hE-8h9" kind="relationship" relationship="rootViewController" id="KOS-3a-SOK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kF5-wj-gtK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bitrise" width="360" height="360"/>
+        <image name="fastlane-logo" width="300" height="289"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

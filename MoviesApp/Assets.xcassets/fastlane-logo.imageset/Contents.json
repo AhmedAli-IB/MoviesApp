@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "fastlane-logo-6CA0B0B428-seeklogo.com.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

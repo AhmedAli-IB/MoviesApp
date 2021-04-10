@@ -8,6 +8,7 @@ target 'MoviesApp' do
   # Pods for MoviesApp
 
   pod 'Kingfisher', '6.2.1'
+  pod 'Firebase', '7.9.0'
 
   target 'MoviesAppTests' do
     inherit! :search_paths

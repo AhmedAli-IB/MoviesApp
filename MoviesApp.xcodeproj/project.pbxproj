@@ -15,6 +15,10 @@
 		602FEB33261B26B100741137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602FEB31261B26B100741137 /* LaunchScreen.storyboard */; };
 		602FEB3E261B26B100741137 /* MoviesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602FEB3D261B26B100741137 /* MoviesAppTests.swift */; };
 		602FEB49261B26B100741137 /* MoviesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602FEB48261B26B100741137 /* MoviesAppUITests.swift */; };
+		606595EC2621F9B5002AA095 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606595EB2621F9B5002AA095 /* SnapshotHelper.swift */; };
+		606595FB2621FAA7002AA095 /* Fastlane_Snapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606595FA2621FAA7002AA095 /* Fastlane_Snapshots.swift */; };
+		606596002621FF0D002AA095 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606595FF2621FF0D002AA095 /* DetailsViewController.swift */; };
+		60659605262269B2002AA095 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60659604262269B2002AA095 /* GoogleService-Info.plist */; };
 		B2F5539AF298296B55B8CB3A /* Pods_MoviesAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 710D5359F9F6183A06857F40 /* Pods_MoviesAppTests.framework */; };
 		C5CC90D7DFC69CDC0DD4A4B4 /* Pods_MoviesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D698B68851E99945501CB0 /* Pods_MoviesApp.framework */; };
 		E88F1ADF36DEFCEC878BCDC0 /* Pods_MoviesApp_MoviesAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A64C3003727129B9272AEF /* Pods_MoviesApp_MoviesAppUITests.framework */; };
@@ -59,6 +63,10 @@
 		602FEB44261B26B100741137 /* MoviesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		602FEB48261B26B100741137 /* MoviesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppUITests.swift; sourceTree = "<group>"; };
 		602FEB4A261B26B100741137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		606595EB2621F9B5002AA095 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		606595FA2621FAA7002AA095 /* Fastlane_Snapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fastlane_Snapshots.swift; sourceTree = "<group>"; };
+		606595FF2621FF0D002AA095 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		60659604262269B2002AA095 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		611A642A0C5F7ECB37D1BE6C /* Pods-MoviesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesApp.debug.xcconfig"; path = "Target Support Files/Pods-MoviesApp/Pods-MoviesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		683A06A8122EBC0682DDA9A3 /* Pods-MoviesApp.development release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesApp.development release.xcconfig"; path = "Target Support Files/Pods-MoviesApp/Pods-MoviesApp.development release.xcconfig"; sourceTree = "<group>"; };
 		710D5359F9F6183A06857F40 /* Pods_MoviesAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +143,8 @@
 				602FEB2F261B26B100741137 /* Assets.xcassets */,
 				602FEB31261B26B100741137 /* LaunchScreen.storyboard */,
 				602FEB34261B26B100741137 /* Info.plist */,
+				606595FF2621FF0D002AA095 /* DetailsViewController.swift */,
+				60659604262269B2002AA095 /* GoogleService-Info.plist */,
 			);
 			path = MoviesApp;
 			sourceTree = "<group>";
@@ -151,8 +161,10 @@
 		602FEB47261B26B100741137 /* MoviesAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				606595EB2621F9B5002AA095 /* SnapshotHelper.swift */,
 				602FEB48261B26B100741137 /* MoviesAppUITests.swift */,
 				602FEB4A261B26B100741137 /* Info.plist */,
+				606595FA2621FAA7002AA095 /* Fastlane_Snapshots.swift */,
 			);
 			path = MoviesAppUITests;
 			sourceTree = "<group>";
@@ -301,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				602FEB33261B26B100741137 /* LaunchScreen.storyboard in Resources */,
+				60659605262269B2002AA095 /* GoogleService-Info.plist in Resources */,
 				602FEB30261B26B100741137 /* Assets.xcassets in Resources */,
 				602FEB2E261B26B000741137 /* Main.storyboard in Resources */,
 			);
@@ -433,6 +446,7 @@
 				602FEB2B261B26B000741137 /* ViewController.swift in Sources */,
 				602FEB27261B26B000741137 /* AppDelegate.swift in Sources */,
 				602FEB29261B26B000741137 /* SceneDelegate.swift in Sources */,
+				606596002621FF0D002AA095 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +463,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				602FEB49261B26B100741137 /* MoviesAppUITests.swift in Sources */,
+				606595EC2621F9B5002AA095 /* SnapshotHelper.swift in Sources */,
+				606595FB2621FAA7002AA095 /* Fastlane_Snapshots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +626,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2C86JD592M;
 				INFOPLIST_FILE = MoviesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -621,6 +638,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PROD";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -631,6 +649,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2C86JD592M;
 				INFOPLIST_FILE = MoviesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -642,6 +661,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PROD;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -800,18 +820,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2C86JD592M;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MoviesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MoviesApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.MoviesApp-Dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG DEV";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Development Debug ";
 		};
@@ -926,18 +949,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2C86JD592M;
 				INFOPLIST_FILE = MoviesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MoviesApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.MoviesApp-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "com.example.MoviesApp-Test_Development2";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TEST";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Testing Debug";
 		};
@@ -1046,18 +1073,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2C86JD592M;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MoviesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MoviesApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.MoviesApp-Dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Development Release";
 		};
@@ -1166,18 +1196,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2C86JD592M;
 				INFOPLIST_FILE = MoviesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MoviesApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.MoviesApp-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "com.example.MoviesApp-Test_Addhoc";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = TEST;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Testing Release";
 		};
