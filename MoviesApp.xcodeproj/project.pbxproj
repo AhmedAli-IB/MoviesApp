@@ -15,6 +15,7 @@
 		602FEB33261B26B100741137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602FEB31261B26B100741137 /* LaunchScreen.storyboard */; };
 		602FEB3E261B26B100741137 /* MoviesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602FEB3D261B26B100741137 /* MoviesAppTests.swift */; };
 		602FEB49261B26B100741137 /* MoviesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602FEB48261B26B100741137 /* MoviesAppUITests.swift */; };
+		6047031B26247E0F003EF436 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6047031A26247E0F003EF436 /* MovieResponse.swift */; };
 		606595EC2621F9B5002AA095 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606595EB2621F9B5002AA095 /* SnapshotHelper.swift */; };
 		606595FB2621FAA7002AA095 /* Fastlane_Snapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606595FA2621FAA7002AA095 /* Fastlane_Snapshots.swift */; };
 		606596002621FF0D002AA095 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606595FF2621FF0D002AA095 /* DetailsViewController.swift */; };
@@ -63,6 +64,7 @@
 		602FEB44261B26B100741137 /* MoviesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		602FEB48261B26B100741137 /* MoviesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppUITests.swift; sourceTree = "<group>"; };
 		602FEB4A261B26B100741137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6047031A26247E0F003EF436 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		606595EB2621F9B5002AA095 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		606595FA2621FAA7002AA095 /* Fastlane_Snapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fastlane_Snapshots.swift; sourceTree = "<group>"; };
 		606595FF2621FF0D002AA095 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -136,14 +138,10 @@
 		602FEB25261B26B000741137 /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
-				602FEB26261B26B000741137 /* AppDelegate.swift */,
-				602FEB28261B26B000741137 /* SceneDelegate.swift */,
-				602FEB2A261B26B000741137 /* ViewController.swift */,
-				602FEB2C261B26B000741137 /* Main.storyboard */,
-				602FEB2F261B26B100741137 /* Assets.xcassets */,
-				602FEB31261B26B100741137 /* LaunchScreen.storyboard */,
-				602FEB34261B26B100741137 /* Info.plist */,
-				606595FF2621FF0D002AA095 /* DetailsViewController.swift */,
+				604702FB26247986003EF436 /* Application */,
+				6047030026247ABE003EF436 /* Resources */,
+				604702FC262479C9003EF436 /* Presentation */,
+				604702FD262479DE003EF436 /* Domain */,
 				60659604262269B2002AA095 /* GoogleService-Info.plist */,
 			);
 			path = MoviesApp;
@@ -167,6 +165,75 @@
 				606595FA2621FAA7002AA095 /* Fastlane_Snapshots.swift */,
 			);
 			path = MoviesAppUITests;
+			sourceTree = "<group>";
+		};
+		604702FB26247986003EF436 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				602FEB26261B26B000741137 /* AppDelegate.swift */,
+				602FEB28261B26B000741137 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		604702FC262479C9003EF436 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				604702FE262479FD003EF436 /* ViewRelated */,
+				604702FF26247A0B003EF436 /* Utils */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		604702FD262479DE003EF436 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				6047030226247D80003EF436 /* UseCases */,
+				6047030126247D4A003EF436 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		604702FE262479FD003EF436 /* ViewRelated */ = {
+			isa = PBXGroup;
+			children = (
+				606595FF2621FF0D002AA095 /* DetailsViewController.swift */,
+				602FEB2C261B26B000741137 /* Main.storyboard */,
+				602FEB2A261B26B000741137 /* ViewController.swift */,
+			);
+			path = ViewRelated;
+			sourceTree = "<group>";
+		};
+		604702FF26247A0B003EF436 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6047030026247ABE003EF436 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				602FEB34261B26B100741137 /* Info.plist */,
+				602FEB2F261B26B100741137 /* Assets.xcassets */,
+				602FEB31261B26B100741137 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6047030126247D4A003EF436 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				6047031A26247E0F003EF436 /* MovieResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		6047030226247D80003EF436 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		AC54DE36E51AF32F78DEF901 /* Frameworks */ = {
@@ -444,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				602FEB2B261B26B000741137 /* ViewController.swift in Sources */,
+				6047031B26247E0F003EF436 /* MovieResponse.swift in Sources */,
 				602FEB27261B26B000741137 /* AppDelegate.swift in Sources */,
 				602FEB29261B26B000741137 /* SceneDelegate.swift in Sources */,
 				606596002621FF0D002AA095 /* DetailsViewController.swift in Sources */,
@@ -628,7 +696,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2C86JD592M;
-				INFOPLIST_FILE = MoviesApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MoviesApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -651,7 +719,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2C86JD592M;
-				INFOPLIST_FILE = MoviesApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MoviesApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -823,7 +891,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = MoviesApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MoviesApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -953,7 +1021,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2C86JD592M;
-				INFOPLIST_FILE = MoviesApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MoviesApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1076,7 +1144,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = MoviesApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MoviesApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1200,7 +1268,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2C86JD592M;
-				INFOPLIST_FILE = MoviesApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MoviesApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
