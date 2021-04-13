@@ -2,7 +2,7 @@ git_url("https://github.com/AhmedAli-IB/MoviesCertificates.git")
 
 storage_mode("git")
 
- type("appstore") # The default type, can be: appstore, adhoc, enterprise or development
+ type("adhoc") # The default type, can be: appstore, adhoc, enterprise or development
 
 app_identifier("com.example.MoviesApp-Test")
 
