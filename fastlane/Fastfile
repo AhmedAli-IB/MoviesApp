@@ -27,7 +27,7 @@ platform :ios do
     selectedType = options[:type]
     identifier = options[:app_identifier]
 
-    match(type: "adhoc", app_identifier: "com.example.MoviesApp-Test", git_full_name: "AhmedAli-IB", git_user_email: "ahmed.amen@ibtikar.net.sa")
+    match(type: selectedType, app_identifier: identifier)
   end
 
   desc "Build for App Store submission"
