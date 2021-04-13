@@ -20,7 +20,6 @@ struct MovieMainRespnse: Codable {
         case movie = "results"
         case totalPages = "total_pages"
         case totalResults = "total_results"
-        
     }
 }
 
